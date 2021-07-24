@@ -1,0 +1,375 @@
+@charset "UTF-8";
+header #btn-menu {
+  display: none; }
+
+header label {
+  display: none;
+  width: 26px;
+  height: 26px;
+  padding: 10px 20px; }
+
+header:hover {
+  cursor: pointer; }
+
+header nav {
+  width: 100%;
+  margin: 0 auto; }
+  header nav ul {
+    list-style: none;
+    display: flex; }
+    header nav ul .menu {
+      text-align: center;
+      flex-grow: 2;
+      position: relative;
+      padding: 20px;
+      margin: 10px; }
+      header nav ul .menu:hover ul {
+        display: block; }
+      header nav ul .menu a {
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        color: #7D5F4E; }
+      header nav ul .menu a:hover {
+        font-weight: 500; }
+      header nav ul .menu ul {
+        position: absolute;
+        display: none; }
+        header nav ul .menu ul .submenu {
+          text-align: center;
+          background-color: #FFF1E6;
+          display: flex;
+          flex-direction: row;
+          margin: 0.3rem;
+          padding: 1rem 4rem; }
+
+/*portada index*/
+.coleccion .coleccion_portada .fotoPortada {
+  width: 100%; }
+
+/* 3 fotos sale index*/
+.contenedor_sale {
+  margin-top: 1.9rem;
+  margin-bottom: 2rem; }
+  .contenedor_sale article {
+    display: block;
+    margin: 1rem; }
+    .contenedor_sale article h3 {
+      text-transform: uppercase;
+      font-size: 1.7em;
+      text-align: center;
+      font-weight: 300; }
+  .contenedor_sale .sale {
+    text-align: center;
+    padding: 0.8rem; }
+    .contenedor_sale .sale img {
+      width: 12.5rem;
+      height: auto;
+      border-radius: 45%;
+      margin: 0.625rem;
+      border: none; }
+    .contenedor_sale .sale img:hover {
+      opacity: 0.4; }
+    .contenedor_sale .sale h4 {
+      display: none; }
+    .contenedor_sale .sale h4:hover {
+      display: block;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1em;
+      color: #7D5F4E; }
+  .contenedor_sale article p {
+    text-align: center;
+    font-size: 1em; }
+
+/*bloque marron recomendaciones index*/
+section .recomendacion {
+  color: #FFF1E6;
+  background-color: #CB997E;
+  padding: 2.5rem;
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline; }
+  section .recomendacion .recomendacion_primera, section .recomendacion .recomendacion_segunda, section .recomendacion .recomendacion_tercera, section .recomendacion .recomendacion_cuarta {
+    text-align: center;
+    padding: 10px;
+    margin: 10px; }
+    section .recomendacion .recomendacion_primera h4, section .recomendacion .recomendacion_segunda h4, section .recomendacion .recomendacion_tercera h4, section .recomendacion .recomendacion_cuarta h4 {
+      text-transform: uppercase;
+      font-size: 1.1em;
+      font-weight: 300;
+      margin: 0.625rem; }
+    section .recomendacion .recomendacion_primera p, section .recomendacion .recomendacion_segunda p, section .recomendacion .recomendacion_tercera p, section .recomendacion .recomendacion_cuarta p {
+      font-family: 'Lato', sans-serif;
+      font-weight: lighter;
+      font-size: 0.8em; }
+
+section {
+  display: flex;
+  justify-content: center; }
+  section .sesion {
+    text-align: center;
+    width: 500px;
+    margin: 30px; }
+    section .sesion h1 {
+      text-transform: uppercase;
+      color: #7D5F4E;
+      font-size: 1.2em;
+      margin-bottom: 2rem; }
+    section .sesion label {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9em; }
+    section .sesion input {
+      margin-bottom: 15px;
+      width: 100%;
+      border: 1px solid #c2c2c2;
+      border-radius: 0;
+      border-color: #e5e5e5;
+      height: 40px;
+      padding: 0 9px; }
+    section .sesion .iniciar {
+      background-color: #F0EFEB;
+      font-family: 'Cormorant', serif;
+      text-transform: uppercase;
+      color: #7D5F4E;
+      border-radius: 45%;
+      width: 40%; }
+
+section .video {
+  display: flex;
+  padding: 20px;
+  margin: 15px; }
+
+section .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+  padding: 20px; }
+  section .texto h2 {
+    text-transform: uppercase;
+    color: #CB997E; }
+  section .texto .todosJuntos {
+    text-align: left;
+    font-style: normal;
+    color: #7D5F4E; }
+
+.maps {
+  margin: 1.8rem;
+  padding: 20rem; }
+  .maps h2 {
+    text-transform: uppercase;
+    color: #CB997E; }
+
+/*html nuevo*/
+.nuevo {
+  display: flex;
+  align-items: center; }
+  .nuevo div {
+    text-align: center;
+    margin: 20px; }
+    .nuevo div .subtitulo {
+      margin-bottom: 20px; }
+    .nuevo div .clasico {
+      text-transform: uppercase;
+      font-size: 3em;
+      padding: 10px;
+      margin-bottom: 10px;
+      animation-duration: 2s;
+      animation-name: clasico; }
+
+@keyframes clasico {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .nuevo div label:hover {
+      font-weight: 500; }
+  .nuevo .fotoNueva {
+    width: 80%;
+    height: 80%; }
+
+section {
+  display: flex;
+  justify-content: center; }
+  section .novedadesNuevas {
+    text-align: center; }
+  section #contact_form {
+    text-align: center; }
+  section input {
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #c2c2c2;
+    border-radius: 0;
+    border-color: #e5e5e5;
+    height: 40px;
+    padding: 0 9px; }
+  section .btn-action {
+    background-color: #F0EFEB;
+    font-family: 'Cormorant', serif;
+    text-transform: uppercase;
+    color: #7D5F4E;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #c2c2c2;
+    border-radius: 0;
+    border-color: #e5e5e5;
+    height: 40px;
+    padding: 0 9px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Cormorant', serif;
+  background-image: url(imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/* grids */
+.grids {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  /*Aca defino las areas del grid, piensen como si todo el contenido de mi pagina estuviera en en rectangulo de 4 filas y 3 columnas (en este caso. Ustedes podrian definir la cantidad de filas y columnas que deseen*/
+  grid-template-areas: "header           header           header           header" "aside            section          section          section" "aside            section          section          section" "footer           footer           footer           footer"; }
+
+/*En esta parte referencio cada una de las clases que estan en el html al area que va a ocupar en la grilla, como no tengo contenido les doy a algunas un tamaño minimo para que se vea bien la idea*/
+.header {
+  grid-area: header; }
+
+.contenedor {
+  grid-area: section; }
+
+.aside {
+  grid-area: aside;
+  padding: 30px;
+  margin: 30px 20px; }
+
+footer {
+  grid-area: footer; }
+
+.padreTienda {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none; }
+  .padreTienda .tiendaPrenda {
+    padding: 20px 15px;
+    margin: 10px; }
+  .padreTienda .prendaUna {
+    width: 150px;
+    border-radius: 45%;
+    border: solid #7E5E4F 1px; }
+  .padreTienda h3 {
+    font-weight: 300;
+    margin-top: 10px; }
+  .padreTienda .producto {
+    margin: 20px;
+    width: 20px; }
+
+/* termina grids*/
+/*bloque marron de index al principio*/
+#cuotas {
+  background-color: #7D5F4E;
+  padding: 0.2rem; }
+  #cuotas p {
+    color: #FFF1E6;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: center; }
+
+footer {
+  display: flex;
+  padding: 2rem;
+  background-color: #7D5F4E; }
+  footer div {
+    flex-direction: row;
+    margin: 1rem; }
+    footer div div h4 {
+      color: #EDDCD2;
+      text-transform: uppercase;
+      font-family: 'Cormorant', serif;
+      font-size: 1.2em;
+      font-weight: 300; }
+    footer div div form {
+      display: inline-flex; }
+      footer div div form #newsletter {
+        margin: 1rem;
+        border: 1px solid #EDDCD2;
+        font-weight: 300;
+        font-size: 0.6em;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        border-radius: 50px;
+        padding: 10px 60px;
+        letter-spacing: 1px;
+        color: #CB997E;
+        box-shadow: none; }
+      footer div div form .actions .btn-action {
+        font-family: 'Cormorant', serif;
+        color: #7D5F4E;
+        background-color: #F0EFEB;
+        font-size: 14px;
+        letter-spacing: 1px;
+        overflow: hidden;
+        position: relative;
+        padding: 10px 30px;
+        display: inline-block;
+        margin: 20px 0;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-weight: 300;
+        border: none;
+        transition: all .3s ease-out;
+        backface-visibility: hidden; }
+    footer div #redes {
+      margin-left: 3rem; }
+      footer div #redes #instagram, footer div #redes #facebook {
+        margin: 0.5rem; }
+
+/*medias queries*/
+@media only screen and (max-width: 768px) {
+  .grids {
+    grid-template-areas: "header           header           header           header" "aside            section          section          section" "aside            section          section          section" "footer           footer           footer           footer"; }
+  header #hamburguesa {
+    display: block; }
+  header label {
+    display: block;
+    margin-bottom: 20px;
+    padding-bottom: 10px; }
+  header nav {
+    position: absolute;
+    background-color: #FFFCF0;
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.6s;
+    z-index: 500;
+    margin-top: 10px; }
+  header ul {
+    flex-direction: column; }
+  header li {
+    border-top: 1px solid; }
+  #btn-menu:checked ~ nav {
+    margin: 0;
+    display: block; } }
+
+@media only screen and (min-width: 768px) {
+  .grids {
+    grid-template-areas: "header           header           header           header" "aside           section          section          section" "aside        section          section          section" "footer           footer           footer           footer"; } }
+
+@media screen and (max-width: 640px) {
+  .grids {
+    grid-template-areas: "header           header           header           header" "aside            aside           aside            aside" "section         section          section          section" "section         section          section          section" "footer           footer           footer           footer"; } }

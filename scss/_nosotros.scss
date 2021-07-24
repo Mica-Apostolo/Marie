@@ -1,0 +1,31 @@
+section{
+    .video{
+      display: flex;
+      padding: 20px;
+      margin: 15px;
+    }
+    .texto{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 15px;
+      padding: 20px;
+      h2{
+        text-transform: uppercase;
+        color: $colormarronclaro;
+      }
+        .todosJuntos{
+          text-align: left;
+          font-style: normal;
+          color: $coloroscuro;
+        }
+    }
+  }
+  .maps{
+    margin: 1.8rem;
+    padding: 20rem;
+    h2{
+      text-transform: uppercase;
+      color: $colormarronclaro;
+    }
+  }

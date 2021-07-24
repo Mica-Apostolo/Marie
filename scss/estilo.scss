@@ -1,0 +1,234 @@
+@import "colores";
+@import "menu";
+@import "index";
+@import "iniciarsesion";
+@import "nosotros";
+@import "nuevo";
+
+
+@mixin cajaCentrada {
+  text-transform: uppercase;
+  text-align: center; 
+}
+
+*{
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Cormorant', serif;
+  background-image: url(imagenes/fondo.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* grids */
+.grids {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  
+/*Aca defino las areas del grid, piensen como si todo el contenido de mi pagina estuviera en en rectangulo de 4 filas y 3 columnas (en este caso. Ustedes podrian definir la cantidad de filas y columnas que deseen*/
+  grid-template-areas:             "header           header           header           header"
+                                   "aside            section          section          section"
+                                   "aside            section          section          section"
+                                   "footer           footer           footer           footer"; }
+
+/*En esta parte referencio cada una de las clases que estan en el html al area que va a ocupar en la grilla, como no tengo contenido les doy a algunas un tamaño minimo para que se vea bien la idea*/
+.header {
+  grid-area: header; 
+}
+
+.contenedor {
+  grid-area: section;
+}
+
+.aside {
+  grid-area: aside;
+  padding: 30px;
+  margin: 30px 20px;
+}
+footer {    
+  grid-area: footer; 
+}
+.padreTienda{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  list-style:none;
+  .tiendaPrenda{
+      padding: 20px 15px;
+      margin: 10px
+  }
+  .prendaUna{
+      width: 150px;
+      border-radius: 45%;
+        border: solid #7E5E4F 1px;
+    }
+  h3{
+      font-weight: 300;
+      margin-top: 10px;
+  }
+  .producto{
+      margin: 20px;
+      width: 20px;
+  }
+  
+}
+/* termina grids*/
+
+/*bloque marron de index al principio*/
+#cuotas{
+  background-color: $coloroscuro;
+  padding: 0.2rem;
+  p{
+  color: $color;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+  }
+}
+
+footer{
+      display: flex;
+      padding: 2rem;
+      background-color: $coloroscuro;
+  div{
+    flex-direction: row;
+    margin: 1rem;
+    div{
+      h4{
+        color: $colorclaro;
+        text-transform: uppercase;
+        font-family: 'Cormorant', serif;
+        font-size: 1.2em;
+        font-weight: 300;
+      }
+      form{
+        display: inline-flex;
+      #newsletter{
+        margin: 1rem;
+        border: 1px solid $colorclaro;
+        font-weight: 300;
+        font-size: 0.6em;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        border-radius: 50px;
+        padding: 10px 60px;
+        letter-spacing: 1px;
+        color:$colormarronclaro;
+        box-shadow: none;
+      }
+      .actions{
+        .btn-action{
+          font-family: 'Cormorant', serif;
+          color: $coloroscuro;
+          background-color: $colorceleste;
+          font-size: 14px;
+          letter-spacing: 1px;
+          overflow: hidden;
+          position: relative;
+          padding: 10px 30px;
+          display: inline-block;
+          margin: 20px 0;
+          border-radius: 50px;
+          text-transform: uppercase;
+          font-weight: 300;
+          border: none;
+          transition: all .3s ease-out;
+          backface-visibility: hidden;
+        }
+      }
+      }
+    }
+        /*devolucion*/
+    .devolucion{
+      margin: 20px;
+      padding: 0.8rem;
+      div{
+
+        h3{
+          color: $color;
+          text-transform: uppercase;
+        }
+      }
+    }
+    div{
+      margin:10px;
+      a{
+        color: $color;
+        text-decoration: none; 
+      }
+      
+    }
+    #redes{
+      margin-left: 3rem;
+      #instagram, #facebook{
+        margin: 0.5rem;
+      }
+    }
+  }
+  
+}
+
+/*medias queries*/
+@media only screen and (max-width: 768px) {
+  .grids {
+           grid-template-areas:             "header           header           header           header"
+                                         "aside            section          section          section"
+                                        "aside            section          section          section"
+                                         "footer           footer           footer           footer"; } 
+
+header {
+  #hamburguesa {
+    display: block;
+     }
+  label {
+    display: block;
+    margin-bottom: 20px;
+    padding-bottom: 10px;}
+    nav {
+      position: absolute; 
+      background-color: #FFFCF0;                                   
+      width: 70%;
+      margin-left: -70%;
+      transition: all 0.6s;
+      z-index: 500;
+      margin-top: 10px; }  
+      ul {
+        flex-direction: column; }
+        li {
+          border-top: 1px solid; }
+} 
+#btn-menu:checked ~ nav {
+      margin: 0;
+      display: block;
+          } }
+
+
+@media only screen and (min-width: 768px) {
+  .grids {
+            grid-template-areas:             "header           header           header           header"
+                                              "aside           section          section          section"
+                                              "aside        section          section          section"
+                                            "footer           footer           footer           footer"; }}
+
+
+@media screen and (max-width: 640px) {
+  .grids {
+            grid-template-areas:             "header           header           header           header"
+                                              "aside            aside           aside            aside"
+                                              "section         section          section          section"
+                                              "section         section          section          section"
+                                              "footer           footer           footer           footer"; }
+
+  }
