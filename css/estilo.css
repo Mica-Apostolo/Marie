@@ -1,4 +1,59 @@
 @charset "UTF-8";
+.buscar {
+  display: table; }
+  .buscar input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 28px;
+    min-width: 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    line-height: 18px;
+    margin: 5px 0;
+    font-size: 14px;
+    -webkit-appearance: none;
+    font-family: 'Mukta Malar';
+    transition: all .6s ease;
+    cursor: pointer;
+    color: #FFF1E6; }
+    .buscar input + div {
+      position: relative;
+      height: 28px;
+      width: 100%;
+      margin: -28px 0 0 0; }
+      .buscar input + div svg {
+        display: block;
+        position: absolute;
+        height: 28px;
+        width: 160px;
+        right: 0;
+        top: 0;
+        fill: none;
+        stroke: #FFF1E6;
+        stroke-width: 1.5px;
+        stroke-dashoffset: 271.908;
+        stroke-dasharray: 59 212.908;
+        transition: all .6s ease; }
+    .buscar input:not(:placeholder-shown), .buscar input:focus {
+      width: 160px;
+      padding: 0 4px;
+      cursor: text; }
+      .buscar input:not(:placeholder-shown) + div svg, .buscar input:focus + div svg {
+        stroke-dasharray: 150 212.908;
+        stroke-dashoffset: 300; }
+
+::selection {
+  background: rgba(255, 255, 255, 0.2); }
+
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2); }
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
 header #btn-menu {
   display: none; }
 
@@ -29,7 +84,9 @@ header nav {
         text-decoration: none;
         font-family: 'Lato', sans-serif;
         text-transform: uppercase;
-        color: #7D5F4E; }
+        color: #7D5F4E;
+        font-size: 0.8em;
+        font-weight: 300; }
       header nav ul .menu a:hover {
         font-weight: 500; }
       header nav ul .menu ul {
@@ -50,9 +107,10 @@ header nav {
 /* 3 fotos sale index*/
 .contenedor_sale {
   margin-top: 1.9rem;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2rem; }
   .contenedor_sale article {
-    display: block;
     margin: 1rem; }
     .contenedor_sale article h3 {
       text-transform: uppercase;
@@ -83,36 +141,35 @@ header nav {
     font-size: 1em; }
 
 /*bloque marron recomendaciones index*/
-section .recomendacion {
+.padre_recomendacion .recomendacion {
   color: #FFF1E6;
   background-color: #CB997E;
   padding: 2.5rem;
-  margin-top: 1.875rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: baseline; }
-  section .recomendacion .recomendacion_primera, section .recomendacion .recomendacion_segunda, section .recomendacion .recomendacion_tercera, section .recomendacion .recomendacion_cuarta {
+  .padre_recomendacion .recomendacion .recomendacion_primera, .padre_recomendacion .recomendacion .recomendacion_segunda, .padre_recomendacion .recomendacion .recomendacion_tercera, .padre_recomendacion .recomendacion .recomendacion_cuarta {
     text-align: center;
     padding: 10px;
     margin: 10px; }
-    section .recomendacion .recomendacion_primera h4, section .recomendacion .recomendacion_segunda h4, section .recomendacion .recomendacion_tercera h4, section .recomendacion .recomendacion_cuarta h4 {
+    .padre_recomendacion .recomendacion .recomendacion_primera h4, .padre_recomendacion .recomendacion .recomendacion_segunda h4, .padre_recomendacion .recomendacion .recomendacion_tercera h4, .padre_recomendacion .recomendacion .recomendacion_cuarta h4 {
       text-transform: uppercase;
       font-size: 1.1em;
       font-weight: 300;
       margin: 0.625rem; }
-    section .recomendacion .recomendacion_primera p, section .recomendacion .recomendacion_segunda p, section .recomendacion .recomendacion_tercera p, section .recomendacion .recomendacion_cuarta p {
+    .padre_recomendacion .recomendacion .recomendacion_primera p, .padre_recomendacion .recomendacion .recomendacion_segunda p, .padre_recomendacion .recomendacion .recomendacion_tercera p, .padre_recomendacion .recomendacion .recomendacion_cuarta p {
       font-family: 'Lato', sans-serif;
       font-weight: lighter;
       font-size: 0.8em; }
 
 section {
-  display: flex;
-  justify-content: center; }
+  /*display: flex;
+    justify-content: center;*/ }
   section .sesion {
     text-align: center;
     width: 500px;
-    margin: 30px; }
+    margin: auto; }
     section .sesion h1 {
       text-transform: uppercase;
       color: #7D5F4E;
@@ -122,10 +179,11 @@ section {
       font-family: 'Lato', sans-serif;
       font-size: 0.9em; }
     section .sesion input {
+      background-color: #FFFCF0;
       margin-bottom: 15px;
       width: 100%;
       border: 1px solid #c2c2c2;
-      border-radius: 0;
+      border-radius: 30px;
       border-color: #e5e5e5;
       height: 40px;
       padding: 0 9px; }
@@ -134,7 +192,6 @@ section {
       font-family: 'Cormorant', serif;
       text-transform: uppercase;
       color: #7D5F4E;
-      border-radius: 45%;
       width: 40%; }
 
 section .video {
@@ -191,44 +248,122 @@ section .texto {
     width: 80%;
     height: 80%; }
 
-section {
+section .novedadesNuevas {
+  text-align: center; }
+
+section #contact_form {
+  text-align: center; }
+
+section input {
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #c2c2c2;
+  border-radius: 0;
+  border-color: #e5e5e5;
+  height: 40px;
+  padding: 0 9px; }
+
+section .btn-action {
+  background-color: #F0EFEB;
+  font-family: 'Cormorant', serif;
+  text-transform: uppercase;
+  color: #7D5F4E;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #c2c2c2;
+  border-radius: 0;
+  border-color: #e5e5e5;
+  height: 40px;
+  padding: 0 9px; }
+
+.contenedorSale {
   display: flex;
-  justify-content: center; }
-  section .novedadesNuevas {
-    text-align: center; }
-  section #contact_form {
-    text-align: center; }
-  section input {
-    margin-bottom: 15px;
-    width: 100%;
-    border: 1px solid #c2c2c2;
-    border-radius: 0;
-    border-color: #e5e5e5;
-    height: 40px;
-    padding: 0 9px; }
-  section .btn-action {
-    background-color: #F0EFEB;
-    font-family: 'Cormorant', serif;
+  flex-direction: row; }
+  .contenedorSale .remeronPrenda {
+    display: flex;
+    align-items: center; }
+    .contenedorSale .remeronPrenda .unoFoto {
+      margin: 3rem; }
+      .contenedorSale .remeronPrenda .unoFoto .fotoSweater {
+        border-radius: 45%; }
+    .contenedorSale .remeronPrenda .remeron .titulo {
+      text-transform: uppercase;
+      color: #7D5F4E;
+      font-size: 2em;
+      font-weight: 200; }
+    .contenedorSale .remeronPrenda .remeron .opciones {
+      font-family: 'Lato', sans-serif;
+      font-size: 1em;
+      font-weight: 200; }
+
+.devolucion div {
+  margin: 1rem;
+  padding: 2rem; }
+  .devolucion div h3 {
     text-transform: uppercase;
-    color: #7D5F4E;
-    margin-bottom: 15px;
-    width: 100%;
-    border: 1px solid #c2c2c2;
-    border-radius: 0;
-    border-color: #e5e5e5;
-    height: 40px;
-    padding: 0 9px; }
+    font-size: 0,8em;
+    font-weight: 200;
+    margin: 2rem 1rem 0,2rem 0; }
+  .devolucion div p {
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0,1em;
+    font-weight: 300; }
+  .devolucion div ul {
+    margin-top: 2rem; }
+    .devolucion div ul li {
+      list-style: none;
+      font-family: 'Lato', sans-serif;
+      text-transform: none;
+      font-size: 0,1em;
+      font-weight: 300;
+      padding-top: 0.8rem; }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: content-box; }
 
 body {
   font-family: 'Cormorant', serif;
-  background-image: url(imagenes/fondo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-color: #FFFCF0; }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 24px;
+    bottom: 24px; }
+    body .dribbble img {
+      display: block;
+      width: 76px; }
+
+.productos {
+  display: flex;
+  justify-content: space-around; }
+  .productos .productosHijo {
+    padding: 3rem; }
+    .productos .productosHijo h3 {
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 300;
+      font-family: 'Lato', sans-serif; }
+  .productos .sueter {
+    color: #7D5F4E;
+    background-color: #FFF1E6; }
+  .productos .vestidos {
+    color: #FFF1E6;
+    background-color: #CB997E; }
+  .productos .mayas {
+    color: #FFF1E6;
+    background-color: #EDDCD2; }
+  .productos .camisas {
+    color: #FFF1E6;
+    background-color: #7D5F4E; }
+
+.formulario > div {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column; }
 
 /* grids */
 .grids {
@@ -269,9 +404,13 @@ footer {
     margin: 10px; }
   .padreTienda .prendaUna {
     width: 150px;
-    border-radius: 45%;
-    border: solid #7E5E4F 1px; }
+    border-radius: 48%; }
+    .padreTienda .prendaUna :hover {
+      opacity: 0.4; }
   .padreTienda h3 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
     font-weight: 300;
     margin-top: 10px; }
   .padreTienda .producto {
@@ -293,8 +432,10 @@ footer {
 
 footer {
   display: flex;
+  justify-content: center;
   padding: 2rem;
-  background-color: #7D5F4E; }
+  background-color: #7D5F4E;
+  /*devolucion*/ }
   footer div {
     flex-direction: row;
     margin: 1rem; }
@@ -335,6 +476,18 @@ footer {
         border: none;
         transition: all .3s ease-out;
         backface-visibility: hidden; }
+  footer div .devolucion {
+    margin: 20px;
+    padding: 0.8rem; }
+    footer div .devolucion div h3 {
+      color: #FFF1E6;
+      text-transform: uppercase; }
+  footer div {
+    margin: 10px; }
+    footer div a {
+      color: #FFF1E6;
+      text-decoration: none;
+      font-size: 1em; }
     footer div #redes {
       margin-left: 3rem; }
       footer div #redes #instagram, footer div #redes #facebook {
@@ -342,6 +495,7 @@ footer {
 
 /*medias queries*/
 @media only screen and (max-width: 768px) {
+  /*web*/
   .grids {
     grid-template-areas: "header           header           header           header" "aside            section          section          section" "aside            section          section          section" "footer           footer           footer           footer"; }
   header #hamburguesa {
@@ -367,9 +521,46 @@ footer {
     display: block; } }
 
 @media only screen and (min-width: 768px) {
+  /*tablet*/
   .grids {
-    grid-template-areas: "header           header           header           header" "aside           section          section          section" "aside        section          section          section" "footer           footer           footer           footer"; } }
+    grid-template-areas: "header           header           header           header" "aside           section          section          section" "aside        section          section          section" "footer           footer           footer           footer"; }
+  header #hamburguesa {
+    display: block; }
+  header label {
+    display: block;
+    margin-bottom: 20px;
+    padding-bottom: 10px; }
+  header nav {
+    position: absolute;
+    background-color: #FFFCF0;
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.6s;
+    z-index: 500;
+    margin-top: 10px; }
+  header ul {
+    flex-direction: column; }
+  header li {
+    border-top: 1px solid; }
+  #btn-menu:checked ~ nav {
+    margin: 0;
+    display: block; } }
+
+/*index*/
+.contenedor_sale .sale img {
+  width: 8rem; }
+
+.padre_recomendacion .recomendacion .recomendacion_primera img {
+  width: 25%; }
+
+.padre_recomendacion .recomendacion .recomendacion_segunda, .padre_recomendacion .recomendacion .recomendacion_tercera, .padre_recomendacion .recomendacion .recomendacion_cuarta
+img {
+  width: 30%; }
+
+.padre_recomendacion .recomendacion h4 {
+  font-size: 1em; }
 
 @media screen and (max-width: 640px) {
+  /*celu*/
   .grids {
     grid-template-areas: "header           header           header           header" "aside            aside           aside            aside" "section         section          section          section" "section         section          section          section" "footer           footer           footer           footer"; } }

@@ -9,9 +9,11 @@
   /* 3 fotos sale index*/            
   .contenedor_sale{
                   margin-top: 1.9rem;
+                  display: flex;
+                  flex-direction: column;
                   margin-bottom: 2rem;
                   article{
-                    display: block;
+                    
                     margin: 1rem;
                     h3{
                       text-transform: uppercase;
@@ -53,12 +55,11 @@
                   
   }
   /*bloque marron recomendaciones index*/
-  section{
+  .padre_recomendacion{
     .recomendacion{
       color: $color;
       background-color: $colormarronclaro;
       padding: 2.5rem;
-      margin-top: 1.875rem;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;

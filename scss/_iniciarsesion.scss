@@ -1,10 +1,10 @@
 section{
-    display: flex;
-    justify-content: center;
+    /*display: flex;
+    justify-content: center;*/
   .sesion{
     text-align: center;
     width: 500px;
-      margin: 30px;
+      margin: auto;
       h1{
         text-transform: uppercase;
         color: $coloroscuro;
@@ -16,10 +16,11 @@ section{
         font-size: 0.9em;
       }
       input{
+        background-color: #FFFCF0;
       margin-bottom: 15px;
       width: 100%;
       border: 1px solid #c2c2c2;
-      border-radius: 0;
+      border-radius: 30px;
       border-color: #e5e5e5;
       height: 40px;
       padding: 0 9px;
@@ -29,7 +30,6 @@ section{
         font-family: 'Cormorant', serif;
         text-transform: uppercase;
         color: $coloroscuro;
-        border-radius: 45%;
         width: 40%;
   
       }
