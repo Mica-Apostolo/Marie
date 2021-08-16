@@ -1,9 +1,9 @@
-section{
-    /*display: flex;
-    justify-content: center;*/
+.padre_sesion{
+  height: 60vh;
   .sesion{
+    padding-top: 2rem;
     text-align: center;
-    width: 500px;
+    width: 60%;
       margin: auto;
       h1{
         text-transform: uppercase;
@@ -16,7 +16,7 @@ section{
         font-size: 0.9em;
       }
       input{
-        background-color: #FFFCF0;
+      background-color: #FFFCF0;
       margin-bottom: 15px;
       width: 100%;
       border: 1px solid #c2c2c2;
@@ -25,7 +25,12 @@ section{
       height: 40px;
       padding: 0 9px;
       }
+      .recordar{
+        width: 0.7rem;
+        
+      }
       .iniciar{
+        
         background-color: $colorceleste;
         font-family: 'Cormorant', serif;
         text-transform: uppercase;

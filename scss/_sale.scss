@@ -1,7 +1,8 @@
 .contenedorSale{
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    .remeronPrenda{
+    .hijoSale{
         display: flex;
         align-items: center;
         .unoFoto{
@@ -10,18 +11,82 @@
                 border-radius: 45%;
             }
         }
-       .remeron{
+       .salePrenda{
            .titulo{
                text-transform: uppercase;
                color: $coloroscuro;
                font-size: 2em;
                font-weight: 200;
            }
-           .opciones{
-               font-family: 'Lato', sans-serif;
-               font-size: 1em;
-               font-weight: 200;
+           #costo{
+               display: inline-flex;
+            #precio{
+                font-family: 'Lato', sans-serif;
+                font-size: 1em;
+                color: $colorclaro;
+                margin-right: 1rem;
+                color: $colormarronclaro;
+               }
+               #descuento{
+                font-family: 'Lato', sans-serif;
+                font-size: 0.8em;
+                font-weight: 300;
+               }
            }
-       } 
-    }
-}
+           .contenedorTalles{
+               .lista{
+                   display: flex;
+                   .itemTalle{
+                       list-style: none;
+                       
+                        .letras{
+                            padding: 0.635rem;
+                            margin:0 0.364rem 0 0;
+                            list-style: none;
+                        color: $colormarronclaro;
+                        text-decoration: none;
+                        background-color: transparent;
+                        border: solid 1px $colorceleste;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        &:hover{
+
+                            color: $coloroscuro;
+                            background-color: rgb(189, 189, 189);
+                        }
+                        }
+                   }
+               }
+           }
+           .contenedorColores{
+               .lista{
+                   display: flex;
+                   .itemTalle{
+                    list-style: none;
+                    
+                    .colorcito{
+                        cursor: pointer;
+                    .bloque{
+                        border-radius: 50%;
+                        margin: 0.625rem;
+                        &:hover{
+                            border: 1px solid $colormarronclaro;
+                        }
+                    }}
+                   }
+               }
+           }
+            .iniciar{
+                
+               border: none;
+               border-radius: 30px;
+                font-family: 'Cormorant', serif;
+                text-transform: uppercase;
+                color: $coloroscuro;
+                width: 40%;
+          
+              }
+           }
+      
+        }  
+} 

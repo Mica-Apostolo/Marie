@@ -3,17 +3,18 @@
 .nuevo{
     display: flex;
     align-items: center;
+    margin-bottom: 4rem;
     div {
         text-align: center;
-        margin: 20px;
+        margin: 1.25rem;
         .subtitulo{
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
         .clasico{
             text-transform: uppercase;
-            font-size: 3em;
-            padding: 10px;
-            margin-bottom: 10px;
+            font-size: 2em;
+            padding: 0.625rem;
+            margin-bottom: 0.625rem;
             animation-duration: 2s;
             animation-name: clasico;
         }
@@ -35,36 +36,12 @@
     }
 }
 
-section{
-    
-    .novedadesNuevas{
-        text-align: center;
+.nuevoSegundoContenedor{
+    text-align: center;
+    #bajada{
+        
+        font-size: 1em;
+        text-transform: uppercase;
     }
-    #contact_form{
-        text-align: center;
-    }
-    input{
-        margin-bottom: 15px;
-        width: 100%;
-        border: 1px solid #c2c2c2;
-        border-radius: 0;
-        border-color: #e5e5e5;
-        height: 40px;
-        padding: 0 9px;
-        }
-        .btn-action{
-          background-color: $colorceleste;
-          font-family: 'Cormorant', serif;
-          text-transform: uppercase;
-          color: $coloroscuro;
-          margin-bottom: 15px;
-          width: 100%;
-          border: 1px solid #c2c2c2;
-          border-radius: 0;
-          border-color: #e5e5e5;
-          height: 40px;
-          padding: 0 9px;
-
-        }
 }
 

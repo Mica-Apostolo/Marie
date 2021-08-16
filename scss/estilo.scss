@@ -7,62 +7,82 @@
 @import "sale";
 @import "cambios";
 
-@mixin cajaCentrada {
-  text-transform: uppercase;
-  text-align: center; 
-}
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 *{
   margin: 0;  
   padding: 0;
-  box-sizing:content-box;
+  box-sizing: border-box;
    }
-// Center & dribbble
+
 body{
   font-family: 'Cormorant', serif;
   background-color: #FFFCF0;
-    
-    
-    .dribbble {
-        position: fixed;
-        display: block;
-        right: 24px;
-        bottom: 24px;
-        img {
-            display: block;
-            width: 76px;
-        }
-    }
-
+ 
+  
 }
-.productos{
-    display: flex;
-    justify-content: space-around;
-    .productosHijo{
-      padding: 3rem;
-      h3{
-      text-transform: uppercase;
-      font-size: 1em;
-      font-weight: 300;
-      font-family: 'Lato', sans-serif;
+
+/*boton de busqueda*/
+.search {
+  display: table;
+  input {
+    color: $coloroscuro;
+      background: none;
+      border: none;
+      outline: none;
+      width: 28px;
+      min-width: 0;
+      padding: 0;
+      z-index: 1;
+      position: relative;
+      line-height: 18px;
+      margin: 5px 0;
+      font-size: 14px;
+      -webkit-appearance: none;
+      transition: all .6s ease;
+      cursor: pointer;
+      color: $coloroscuro;
+      & + div {
+          position: relative;
+          height: 28px;
+          width: 100%;
+          margin: -28px 0 0 0;
+          svg {
+              display: block;
+              position: absolute;
+              height: 28px;
+              width: 160px;
+              right: 0;
+              top: 0;
+              fill: none;
+              stroke: $coloroscuro;
+              stroke-width: 1.5px;
+              stroke-dashoffset: 212.908 + 59;
+              stroke-dasharray: 59 212.908;
+              transition: all .6s ease;
+          }
       }
+      &:not(:placeholder-shown),
+      &:focus {
+          width: 160px;
+          padding: 0 4px;
+          cursor: text;
+          &+ div {
+              svg {
+                  stroke-dasharray: 150 212.908;
+                  stroke-dashoffset: 300;
+              }
+          }
       }
-      .sueter{
-        color: $coloroscuro;
-        background-color: $color;
-      }
-      .vestidos{
-        color: $color;
-        background-color: $colormarronclaro;
-      }
-      .mayas{
-        color: $color;
-        background-color: $colorclaro;
-      }
-      .camisas{
-        color: $color;
-        background-color: $coloroscuro;
-      }
-    }
+  }
+}
+
+::selection {
+  background: rgba($coloroscuro, .2);
+}
+::-moz-selection {
+  background: rgba($coloroscuro, .2);
+}
+
 .formulario > div {
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
@@ -71,12 +91,25 @@ body{
   
 }
 
-/* grids */
+/*tienda html*/
+/* grids de tienda */
+
+aside{
+  ol{
+    li{
+      a{
+        color: $colormarronclaro;
+        font-family: 'Cormorant', serif;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 .grids {
   max-width: 1600px;
   margin: 0 auto;
   display: grid;
-  grid-gap: 5px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, auto);
   
@@ -144,6 +177,7 @@ footer {
   background-color: $coloroscuro;
   padding: 0.2rem;
   p{
+    margin-bottom: 0;
   color: $color;
   font-weight: 300;
   font-family: 'Lato', sans-serif;
@@ -235,118 +269,142 @@ footer{
         margin: 0.5rem;
       }
     }
-  }
-  
+  } 
 }
 
-/*medias queries*/
-@media only screen and (max-width: 768px) { /*web*/
+/*MEDIAS QUERIES*/
+
+@media only screen and (max-width: 768px) { 
   .grids {
            grid-template-areas:         "header           header           header           header"
                                          "aside            section          section          section"
                                         "aside            section          section          section"
-                                         "footer           footer           footer           footer"; } 
+                                         "footer           footer           footer           footer"; }
+  /*nuevo*/
+  .nuevo{
+    flex-direction: column;
+  }
 
-header {
-  #hamburguesa {
-    display: block;
-     }
-  label {
-    display: block;
-    margin-bottom: 20px;
-    padding-bottom: 10px;}
-    nav {
-      position: absolute; 
-      background-color: #FFFCF0;                                   
-      width: 70%;
-      margin-left: -70%;
-      transition: all 0.6s;
-      z-index: 500;
-      margin-top: 10px; }  
-      ul {
-        flex-direction: column; }
-        li {
-          border-top: 1px solid; }
-} 
-#btn-menu:checked ~ nav {
-      margin: 0;
-      display: block;
-          } }
+ /*sale*/
+ .hijoSale{
+  flex-direction: column;
+}} 
 
 
-@media only screen and (min-width: 768px) { /*tablet*/
+
+
+@media only screen and (min-width: 768px) { 
   .grids {
             grid-template-areas:             "header           header           header           header"
                                               "aside           section          section          section"
                                               "aside        section          section          section"
                                             "footer           footer           footer           footer"; }
-   header {
-   #hamburguesa {
-    display: block;
-     }
- label {
- display: block;
-  margin-bottom: 20px;
- padding-bottom: 10px;}
-     nav {
-    position: absolute; 
-   background-color: #FFFCF0;                                   
-  width: 70%;
-  margin-left: -70%;
-  transition: all 0.6s;
-  z-index: 500;
-  margin-top: 10px; }  
- ul {
-  flex-direction: column; }
-    li {
-  border-top: 1px solid; }
-  } 
-   #btn-menu:checked ~ nav {
- margin: 0;
- display: block;
-      } 
-   }
 
    /*index*/
    .contenedor_sale{
-    
      .sale{
        img{
         width: 8rem;
        }
      }
    } 
-
    
- 
-.padre_recomendacion{
-  .recomendacion{
-    .recomendacion_primera{
-      img{
-        width: 25%;
-      }}
-      .recomendacion_segunda, .recomendacion_tercera, .recomendacion_cuarta
-      
-      img{
-        width: 30%;
-      }
-      h4{
-        font-size: 1em;
-      }
-    }
-    
-  }  
-    
-footer{
+  }
+  
+   
 
-}
 @media screen and (max-width: 640px) { /*celu*/
+  .grid_productos{
+    grid-template-columns: repeat(1, auto);
+  }
   .grids {
             grid-template-areas:             "header           header           header           header"
                                               "aside            aside           aside            aside"
                                               "section         section          section          section"
                                               "section         section          section          section"
-                                              "footer           footer           footer           footer"; }
+                                              "footer           footer           footer           footer"; 
+                                            }
 
+  header {
+    #hamburguesa {
+      display: block;
+       }
+    label {
+      display: block;
+      margin-bottom: 20px;
+      padding-bottom: 10px;}
+      nav {
+        position: absolute; 
+        background-color: #FFFCF0;                                   
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.6s;
+        z-index: 500;
+        margin-top: 10px; }  
+        ul {
+          flex-direction: column; }
+          li {
+            border-top: 1px solid; }
+  } 
+  #btn-menu:checked ~ nav {
+        margin: 0;
+        display: block;
+            } 
+.productos{
+  display: block;
+  .productosHijo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.3rem;
   }
+}
+.padre_recomendacion{
+  .recomendacion{
+    flex-direction: column;
+    align-items: center;
+      h4{
+        font-size: 1em;
+      }
+    }
+  } 
 
+/*nosotros html*/ 
+section{
+  .video{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  .localesMarie { 
+    .locales {
+   .tiendas{
+    #tienda{
+      width: 100%;
+      margin: 0;
+    }}}}
+
+/*fin nosotros html*/ 
+  footer{
+    flex-direction: column;
+    text-align: center;
+    div{
+      div{
+      form{
+        display: block;
+        #newsletter{
+          margin: 0;
+        }
+      }
+    }
+   }
+}
+ /*sale*/
+ .hijoSale{
+  flex-direction: column;
+}
+}

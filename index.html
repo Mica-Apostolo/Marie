@@ -6,8 +6,14 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--icono cabecera-->
 	<link rel="icon" href="./imagenes/favicon.png">
+	<!--codigo boostrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!--css-->
 	<link rel="stylesheet" href="css/estilo.css">
+	<!--tipografias-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,32 +32,34 @@
 					<ul class="menu_submenu">
 						<li class="submenu"><a href="sale.html">sale</a></li>
 						<li class="submenu"><a href="nuevo.html">nuevo</a></li>
-						<li class="submenu"><a href="prendas.html">prendas</a></li>
+						
 					</ul>
 				</li>
 				<li class="menu"><a href="nosotros.html">nosotros</a></li>
 				<li class="menu"><a href="index.html" id="logo"><img src="./imagenes/logo.png" width="100px" alt="icono de marca"></a></li>
-				<li class="menu"><a href="buscar.html"><img src="https://img.icons8.com/ios/24/000000/search--v1.png" width="15px" id="lupa" alt="icono de busqueda"/></a></li>
-				
-				<div class="buscar">
-					<input type="text" placeholder=" ">
-					<div>
-						<svg>
-							<use xlink:href="#path">
-						</svg>
+				<li class="menu">
+					<div class="search">
+						<input type="text" placeholder=" ">
+						<div>
+							<svg>
+								<use xlink:href="#path">
+							</svg>
+						</div>
 					</div>
-				</div>
-					
-				<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-					<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
-						<path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
-					</symbol>
-				</svg>
-					
-				<!-- dribbble -->
-				<a class="dribbble" href="https://dribbble.com/shots/5547403-Search-input-animation" target="_blank"><img src="https://dribbble.com/assets/logo-small-2x-9fe74d2ad7b25fba0f50168523c15fda4c35534f9ea0b1011179275383035439.png" alt=""></a>
-				<li class="menu"><a href="iniciarsesion.html"><img src="https://img.icons8.com/small/16/000000/gender-neutral-user.png" width="15px" alt="icono de usuario"/></a></li>
-			</ul>
+						
+					<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+						<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+							<path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+						</symbol>
+					</svg>
+						
+					<!-- dribbble -->
+					<a class="dribbble" href="https://dribbble.com/shots/5547403-Search-input-animation" target="_blank"><img src="https://dribbble.com/assets/logo-small-2x-9fe74d2ad7b25fba0f50168523c15fda4c35534f9ea0b1011179275383035439.png" alt=""></a>
+				</li>
+				
+				<li class="menu"><a href="iniciarsesion.html"><img src="https://img.icons8.com/small/16/000000/gender-neutral-user.png" width="20px" alt="icono de usuario"/></a></li>
+				
+				<li class="menu"><a href="index.html" id="cart" alt="icono de compras"><i class="fa fa-shopping-cart"></i></a></li>
 		</nav>
 	</header>
 	<section class="coleccion">
@@ -59,34 +67,35 @@
 			<a href="nuevo.html"><img class="fotoPortada" src="imagenes/nuevacoleccion.jpg"></a>
 		</div>
 	</section>
-	<section class="grids productos">
+	<section class="grid_productos">
 		<div class="productosHijo sueter">
-			<img>
-			<h3>Sueters</h3>
+			
+			<a href="tienda.html" class="sueter">Sueters</a>
 		</div>
 		<div class="productosHijo vestidos">
-			<img>
-			<h3>Vestidos</h3>
+			<a href="tienda.html" class="vestidos">Vestidos</a>
+			
 		</div>
-		<div class="productosHijo mayas">
-			<img>
-			<h3>Mayas</h3>
+		<div class="productosHijo kimonos">
+			<a href="tienda.html" class="kimonos">Kimonos</a>
+			
 		</div>
 		<div class="productosHijo camisas">
-			<img>
-			<h3>Camisas</h3>
+			<a href="tienda.html" class="camisas">Camisas</a>
+			
 		</div>
 	</section>
 	
 	<section class="contenedor_sale">
-		<article><h3>- Última semana -</h3></article>
+		<article><h3>- Última semana - 40% OFF -</h3></article>
 		<article class="sale">
-			<a href="sale.html"><img src="./imagenes/sweater-beige.jpg" alt="sweater de color beige"><h4>beige</h4></a>
-			<a href="sale.html"><img src="./imagenes/sweaters-grises.jpg" alt="sweaters de colores grises"><h4>gris</h4></a>
-			<a href="sale.html"><img src="./imagenes/sweater-mostaza.jpg" alt="sweater de color mostaza"><h4>mostaza</h4></a>
+			<a href="sale.html"><img src="./imagenes/saco-rojo.jpg" alt="saco largo rojo"></a>
+			<a href="sale.html"><img src="./imagenes/sweater-beige.jpg" alt="sweater de color beige"></a>
+			<a href="sale.html"><img src="./imagenes/sweaters-grises.jpg" alt="sweaters de colores grises"></a>
+			<a href="sale.html"><img src="./imagenes/sweater-mostaza.jpg" alt="sweater de color mostaza"></a>
 		</article>
 		<article>
-			<p>- temporada invierno -</p>
+			<p>- temporada invierno 2021 -</p>
 		</article>
 	</section>
 
@@ -117,31 +126,34 @@
 		</article>
 </section>
 
-	<footer>
+<footer>
+	<div>
+		<div><h4>Newsletter</h4></div>
 		<div>
-			<div><h4>Newsletter</h4></div>
-			<div>
-				<form action="index.html" method="post">
-					<div class="newsletter">
-							<input name="email" type="email" id="newsletter" class="form-control" placeholder="Tu mail" data-validate="{required:true, 'validate-email':true}">
-					</div>
-					<div class="actions">
-						<button class="btn-action" type="submit">
-						Suscribirse                </button>
-					</div>
-				</form>
-			</div>
+			<form action="index.html" method="post">
+				<div class="newsletter">
+						<input name="email" type="email" id="newsletter" class="form-control" placeholder="Tu mail" data-validate="{required:true, 'validate-email':true}">
+				</div>
+				<div class="actions">
+					<button class="btn-action" type="submit">
+					Suscribirse                </button>
+				</div>
+			</form>
 		</div>
+	</div>
+	<div id="redes">
+		<div><h4>Nuestras redes</h4></div>
 		<div>
 			<a href="devolucion.html">Cambios y devoluciones</a>
 		</div>
-		<div id="redes">
-			<div><h4>Nuestras redes</h4></div>
-			<div>
-				<a href="https://www.instagram.com/" id="instagram"><img src="https://img.icons8.com/material-outlined/24/ffffff/instagram-new--v1.png" alt="icono de instagram"/></a>
-				<a href="https://es-la.facebook.com/"id="facebook"><img src="https://img.icons8.com/material-outlined/24/ffffff/facebook-new.png" alt="icono de facebook"/></a>
-			</div>
+		<div>
+			<a href="https://www.instagram.com/" id="instagram" target="_blank"><img src="https://img.icons8.com/material-outlined/24/ffffff/instagram-new--v1.png" alt="icono de instagram"/></a>
+			<a href="https://es-la.facebook.com/"id="facebook" target="_blank"><img src="https://img.icons8.com/material-outlined/24/ffffff/facebook-new.png" alt="icono de facebook"/></a>
 		</div>
-	</footer>
+	</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

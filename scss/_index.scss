@@ -6,6 +6,43 @@
       }
     }
   }     
+  /*bloques de colores prendas en index*/
+
+.grid_productos{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, auto);
+    .productosHijo{
+      padding: 3rem;
+      &:hover{
+        opacity: 0.4;
+      }
+      a{
+      text-transform: uppercase;
+      font-size: 1.5em;
+      font-weight: 300;
+      text-align: center;
+      text-decoration: none;
+      }
+      }
+      .sueter{
+        color: $coloroscuro;
+        background-color: $color;
+      }
+      .vestidos{
+        color: $color;
+        background-color: $colormarronclaro;
+      }
+      .kimonos{
+        color: $coloroscuro;
+        background-color: $colorclaro;
+      }
+      .camisas{
+        color: $color;
+        background-color: $coloroscuro;
+      }
+    }
   /* 3 fotos sale index*/            
   .contenedor_sale{
                   margin-top: 1.9rem;

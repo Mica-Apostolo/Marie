@@ -1,4 +1,16 @@
 section{
+  ol{
+    li{
+      a{
+        color: $colormarronclaro;
+        font-family: 'Cormorant', serif;
+        text-decoration: none;
+        
+      }
+    }
+  }
+}
+section{
     .video{
       display: flex;
       padding: 20px;
@@ -13,6 +25,8 @@ section{
       h2{
         text-transform: uppercase;
         color: $colormarronclaro;
+        font-weight: 200;
+        font-size: 1.7em;
       }
         .todosJuntos{
           text-align: left;
@@ -21,11 +35,40 @@ section{
         }
     }
   }
-  .maps{
-    margin: 1.8rem;
-    padding: 20rem;
-    h2{
-      text-transform: uppercase;
-      color: $colormarronclaro;
+  .localesMarie{
+    text-align: center;
+    margin-bottom: 4rem;
+    #ubicacion{
+      text-align: center;
+      margin: 3rem;
+      h2{
+        text-transform: uppercase;
+        color: $coloroscuro;
+        font-weight: 200;
+        font-size: 2em;
+        .direccion{
+          font-style: normal;
+          color: $coloroscuro;
+          font-family: 'Lato', sans-serif;
+        }
+      }}
+    .locales{
+      .tiendas{
+        margin-bottom: 3rem;
+        #tienda{
+              margin: 1rem;
+        }
+        h3{
+          color: $coloroscuro;
+          text-transform: uppercase;
+          font-size: 1.2em;
+          font-weight: 200;
+        }
+        .direccion{
+          font-size: 0.8em;
+          color: $coloroscuro;
+          font-family: 'Lato', sans-serif;
+        }
+      }
     }
   }
